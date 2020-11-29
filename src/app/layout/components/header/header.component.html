@@ -1,0 +1,45 @@
+<header class="header-area header-sticky">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <nav class="main-nav">
+                  <!-- ***** Logo Start ***** -->
+                  <a (click)="onScrollSection('welcome')" class="logo">
+                     <img src="assets/images/logo.png" alt="Softy Pinko"/>
+                  </a>
+                  <!-- ***** Logo End ***** -->
+                  <!-- ***** Menu Start ***** -->
+                  <ul class="nav" id="navigation" [@slideInOut]="isMenuOpen ? 'void' : '*'">
+                      <li><a href="javascript:;" data-anchor="welcome" (click)="onScrollSection('welcome')" [ngClass]="{
+                        'active': anchorName === 'welcome'
+                      }">Home</a></li>
+                      <li><a href="javascript:;" data-anchor="features" (click)="onScrollSection('features')" [ngClass]="{
+                        'active': anchorName === 'features'
+                      }">About</a></li>
+                      <li><a href="javascript:;" data-anchor="work-process" (click)="onScrollSection('work-process')" [ngClass]="{
+                        'active': anchorName === 'work-process'
+                      }">Work Process</a></li>
+                      <li><a href="javascript:;" data-anchor="testimonials" (click)="onScrollSection('testimonials')" [ngClass]="{
+                        'active': anchorName === 'testimonials'
+                      }">Testimonials</a></li>
+                      <li><a href="javascript:;" data-anchor="pricing-plans" (click)="onScrollSection('pricing-plans')" [ngClass]="{
+                        'active': anchorName === 'pricing-plans'
+                      }">Pricing Tables</a></li>
+                      <li><a href="javascript:;" data-anchor="blog" (click)="onScrollSection('blog')" [ngClass]="{
+                        'active': anchorName === 'blog'
+                      }">Blog Entries</a></li>
+                      <li><a href="javascript:;" data-anchor="contact-us" (click)="onScrollSection('contact-us')" [ngClass]="{
+                        'active': anchorName === 'contact-us'
+                      }">Contact Us</a></li>
+                  </ul>
+                  <a class='menu-trigger' (click)="onMenuTrigger()" [ngClass]="{
+                    'active': isMenuOpen
+                  }">
+                      <span>Menu</span>
+                  </a>
+                  <!-- ***** Menu End ***** -->
+              </nav>
+          </div>
+      </div>
+  </div>
+</header>
